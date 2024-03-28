@@ -5,7 +5,6 @@ import "../../custom.css";
 
 const Hosts = () => {
   const { hostData, setHostData } = useContext(HostContext);
-  // const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const url = "https://localhost:7099/api/host/GetAll";
@@ -15,11 +14,10 @@ const Hosts = () => {
           .then((res) => res.json())
           .then((data) => {
             setHostData(data);
-            console.log(data);
           })
           .catch((err) => console.error(err))
       : console.log("hostData already loaded");
-
+    console.log(hostData);
     setLoaded(true);
   }, []);
 
