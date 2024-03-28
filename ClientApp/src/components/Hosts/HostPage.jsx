@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import Result from "../Search/Result.jsx";
+import { HostContext } from "../../Context/Context";
 import { Stack, Typography } from "@mui/material";
 
 const HostPage = () => {
   const location = useLocation();
-  // TODO: if no location.state, useParams to get the info about the person,
-  // TODO:  otherwise just use the state props
+  const params = useParams();
+  const { hostData } = useContext(HostContext);
+
   // location.state
   //   ? console.log("location.state:", location.state)
   //   : console.log("NO LOCATION STATE");
+  if (!location.state) {
+    // get host with API call for the One host we are accessing
+    console.log("NO LOCATION STATE");
+    console.log(params["*"]);
+    console.log(hostData);
+  }
 
-  // const params = useParams();
   const { episodeList, name } = location.state;
   console.log(episodeList, name);
   return (

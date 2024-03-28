@@ -4,8 +4,9 @@ import HostCard from "../Hosts/HostCard";
 const Guests = () => {
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
-    const url = "https://localhost:7099/api/Episode/guests";
+    const url = "https://localhost:7099/api/Guest/GetAll";
     console.log(`gonna fetch ${url}`);
     fetch(url)
       .then((res) => res.json())

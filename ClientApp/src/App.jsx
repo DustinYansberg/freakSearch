@@ -17,6 +17,7 @@ function App() {
         <Route path="/" element={<Navigate to="/search" />} />
         <Route path="/search" element={<Search />} />
         <Route path="/hosts" element={<Hosts />} />
+        {/* <Route path="/hosts/name=*" element={<HostPage />} /> */}
         <Route path="/hosts/*" element={<HostPage />} />
         <Route path="/guests" element={<Guests />} />
       </Routes>

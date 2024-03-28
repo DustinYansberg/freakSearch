@@ -5,14 +5,17 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./App.jsx";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration.js";
 import reportWebVitals from "./reportWebVitals.js";
+import { HostContextProvider } from "./Context/Context.jsx";
 import "./custom.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <HostContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HostContextProvider>
   </React.StrictMode>
 );
 

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const HostCard = (props) => {
   return (
     <Link
+      // to={`/hosts/name=${props.name}`}
       to={`/hosts/${props.name}`}
       state={{
         episodeList: props.episodeList,
