@@ -32,7 +32,7 @@ code {
 }
 
 /* .host-card{} */
-.host-card:hover {
+.hover-card:hover {
   transform: translate3d(5px, -5px, 5px);
   box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.5);
 }

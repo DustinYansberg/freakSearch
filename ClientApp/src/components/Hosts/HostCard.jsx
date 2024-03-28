@@ -17,7 +17,7 @@ const HostCard = (props) => {
       style={{ textDecoration: "none", maxWidth: "304.08px" }}
     >
       <Card
-        className="host-card"
+        className="host-card hover-card"
         sx={{
           display: "flex",
           flexDirection: "column",

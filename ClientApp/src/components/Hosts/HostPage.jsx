@@ -1,5 +1,7 @@
 import React from "react";
 import { useLocation, useParams } from "react-router-dom";
+import Result from "../Search/Result.jsx";
+import { Stack, Typography } from "@mui/material";
 
 const HostPage = () => {
   const location = useLocation();
@@ -14,10 +16,20 @@ const HostPage = () => {
   console.log(episodeList, name);
   return (
     <>
-      <div>{name}</div>
-      {episodeList.map((episode) => (
-        <div key={episode.id}>{episode.title}</div>
+      <Typography variant="h3" sx={{ marginBottom: "1em" }}>
+        {name}
+      </Typography>
+      <Typography variant="h5" sx={{ marginBottom: "1em" }}>
+        {name} has been on {episodeList.length} episodes:
+      </Typography>
+
+      {episodeList.map((episode, index) => (
+        <Result key={index} result={episode} />
       ))}
+
+      {/* {episodeList.map((episode) => (
+        <div key={episode.id}>{episode.title}</div>
+      ))} */}
     </>
   );
 };
