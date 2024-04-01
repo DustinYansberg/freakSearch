@@ -1,15 +1,12 @@
 import React, { useContext } from "react";
 import { Card, CardContent, Typography } from "@mui/material";
-import { Context } from "../../Context/Context.js";
 import { Link } from "react-router-dom";
 
-const HostCard = ({ host }) => {
-  const { currHost, setCurrHost } = useContext(Context);
+const GuestCard = ({ guest }) => {
   return (
     <Link
-      to={`./${host.id}`}
+      to={`./${guest.id}`}
       style={{ textDecoration: "none", maxWidth: "304.08px" }}
-      onClick={() => setCurrHost(host)}
     >
       <Card
         className="host-card hover-card"
@@ -28,9 +25,9 @@ const HostCard = ({ host }) => {
         }}
       >
         <CardContent>
-          <Typography variant="h5">{host.name}</Typography>
+          <Typography variant="h5">{guest.name}</Typography>
           <Typography variant="body1">
-            Episodes: {host.episodes.length}
+            Episodes: {guest.episodes.length}
           </Typography>
         </CardContent>
       </Card>
@@ -38,4 +35,4 @@ const HostCard = ({ host }) => {
   );
 };
 
-export default HostCard;
+export default GuestCard;

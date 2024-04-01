@@ -25,7 +25,8 @@ public class GuestController : Controller
         var guestsWithEpisodes = await _context.Guests
             .Select(g => new
             {
-                Guest = g,
+                g.Id,
+                g.Name,
                 Episodes = _context.GuestsofEpisodes
                     .Where(pb => pb.GuestId == g.Id)
                     .Select(pb => pb.Episode)

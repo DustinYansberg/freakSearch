@@ -1,37 +1,37 @@
-import React, { useEffect, useState } from "react";
-import HostCard from "../Hosts/HostCard";
+import React, { useContext, useState } from "react";
+import GuestCard from "./GuestCard.jsx";
+import { Context } from "../../Context/Context.js";
+import { Divider, Pagination } from "@mui/material";
+import "../../custom.css";
 
 const Guests = () => {
-  const [data, setData] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+  const { guestData } = useContext(Context);
 
-  useEffect(() => {
-    const url = "https://localhost:7099/api/Guest/GetAll";
-    console.log(`gonna fetch ${url}`);
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        console.log(data);
-      })
-      .catch((err) => console.error(err));
-    setLoaded(true);
-  }, []);
+  const [page, setPage] = useState(1);
+  const guestsPerPage = 21;
+
+  const handleChange = (e, value) => {
+    setPage(value);
+    console.log(value);
+  };
 
   return (
     <>
       <h1>Guests</h1>
+      <Pagination
+        count={Math.ceil(guestData.length / guestsPerPage)}
+        shape="rounded"
+        // defaultPage={1}
+        page={page}
+        onChange={handleChange}
+      />
+      <Divider component="div" />
       <div className="host-list">
-        {loaded
-          ? data.map((e) => (
-              <HostCard
-                key={e.guest.id}
-                name={e.guest.name}
-                episodeCount={e.episodes.length}
-                episodeList={e.episodes}
-              />
-            ))
-          : "loading..."}
+        {guestData
+          .slice((page - 1) * guestsPerPage, page * guestsPerPage)
+          .map((guest) => (
+            <GuestCard key={guest.id} guest={guest} />
+          ))}
       </div>
     </>
   );

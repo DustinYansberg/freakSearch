@@ -25,7 +25,8 @@ public class HostController : Controller
         var presentersWithEpisodes = await _context.Presenters
             .Select(p => new
             {
-                Presenter = p,
+                p.Id,
+                p.Name,
                 Episodes = _context.PresentedBys
                     .Where(pb => pb.PresenterId == p.Id)
                     .Select(pb => pb.Episode)
@@ -35,14 +36,16 @@ public class HostController : Controller
 
         return Ok(presentersWithEpisodes);
     }
-    [HttpGet("GetOne/{Name}")]
-    public async Task<IActionResult> GetOnePresenter(string Name)
+
+    [HttpGet("GetOne/{Id}")]
+    public async Task<IActionResult> GetOnePresenter(int Id)
     {
         var presenter = await _context.Presenters
-            .Where(p => p.Name == Name)
+            .Where(p => p.Id == Id)
             .Select(p => new
             {
-                Presenter = p,
+                p.Id,
+                p.Name,
                 Episodes = _context.PresentedBys
                     .Where(pb => pb.PresenterId == p.Id)
                     .Select(pb => pb.Episode)

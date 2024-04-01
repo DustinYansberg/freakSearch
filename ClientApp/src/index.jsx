@@ -5,18 +5,18 @@ import { BrowserRouter } from "react-router-dom";
 import { App } from "./App.jsx";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration.js";
 import reportWebVitals from "./reportWebVitals.js";
-import { HostContextProvider } from "./Context/Context.jsx";
+import { ContextProvider } from "./Context/Context.js";
 import "./custom.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <ContextProvider>
     <BrowserRouter>
-      <HostContextProvider>
-        <App />
-      </HostContextProvider>
+      <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </ContextProvider>
+  // <React.StrictMode>
+  //   </React.StrictMode>
 );
 
 // TODO add context provider in index.jsx
