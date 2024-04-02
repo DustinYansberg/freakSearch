@@ -1,7 +1,7 @@
 # Stage 1: Build the React frontend
 FROM node:18.17.0 as build
 WORKDIR /app
-COPY ClientApp/package*.json ./
+COPY ../frontend/ClientApp/package*.json ./
 RUN npm install
 COPY ClientApp/ ./
 RUN npm run build
