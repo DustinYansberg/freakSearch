@@ -1,5 +1,5 @@
 import { Button, ButtonGroup } from "@mui/material";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from "react";
 
 const NavBar = () => {
@@ -10,8 +10,6 @@ const NavBar = () => {
         variant="contained"
         aria-label="Navigation buttons"
       >
-        {/* <NavLink>
-        </NavLink> */}
         <Link to="/search">
           <Button>Episodes</Button>
         </Link>
@@ -21,7 +19,6 @@ const NavBar = () => {
         <Link to="/guests">
           <Button>Guests</Button>
         </Link>
-        {/* <Button href="/topics">Topics</Button> */}
       </ButtonGroup>
     </>
   );

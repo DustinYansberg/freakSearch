@@ -21,7 +21,6 @@ const Guests = () => {
       <Pagination
         count={Math.ceil(guestData.length / guestsPerPage)}
         shape="rounded"
-        // defaultPage={1}
         page={page}
         onChange={handleChange}
       />

@@ -12,8 +12,6 @@ const HostPage = () => {
   const [episodes, setEpisodes] = useState([]);
   const [name, setName] = useState("");
 
-  console.log(typeof params.id);
-
   useEffect(() => {
     setCurrHost(hostData.find((host) => host.id === parseInt(params.id)));
   }, [hostData, params.id]);
