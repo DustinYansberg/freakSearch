@@ -4,7 +4,7 @@ import { Context } from "../../Context/Context.js";
 import { Link } from "react-router-dom";
 
 const HostCard = ({ host }) => {
-  const { currHost, setCurrHost } = useContext(Context);
+  const { setCurrHost } = useContext(Context);
   return (
     <Link
       to={`./${host.id}`}

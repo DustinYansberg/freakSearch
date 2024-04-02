@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Routes, Route, BrowserRouter } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import Search from "./components/Search/Search.jsx";
 import Hosts from "./components/Hosts/Hosts.jsx";
 import HostPage from "./components/Hosts/HostPage.jsx";

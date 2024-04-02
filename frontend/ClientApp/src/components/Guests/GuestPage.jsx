@@ -4,33 +4,33 @@ import Result from "../Search/Result.jsx";
 import { Context } from "../../Context/Context.js";
 import { Typography } from "@mui/material";
 
-const HostPage = () => {
+const GuestPage = () => {
   const params = useParams();
-  const { hostData } = useContext(Context);
+  const { guestData } = useContext(Context);
 
-  const [currHost, setCurrHost] = useState(undefined);
+  const [currGuest, setCurrGuest] = useState(undefined);
   const [episodes, setEpisodes] = useState([]);
-  const [name, setName] = useState("");
+
+  console.log(typeof params.id);
 
   useEffect(() => {
-    setCurrHost(hostData.find((host) => host.id === parseInt(params.id)));
-  }, [hostData, params.id]);
+    setCurrGuest(guestData.find((guest) => guest.id === parseInt(params.id)));
+  }, [guestData, params.id]);
 
   useEffect(() => {
-    if (currHost) {
-      setEpisodes(currHost.episodes);
-      setName(currHost.name);
+    if (currGuest) {
+      setEpisodes(currGuest.episodes);
     }
-  }, [currHost]);
+  }, [currGuest]);
   return (
     <>
-      {currHost ? (
+      {currGuest ? (
         <>
           <Typography variant="h3" sx={{ marginBottom: "1em" }}>
-            {currHost.name}
+            {currGuest.name}
           </Typography>
           <Typography variant="h5" sx={{ marginBottom: "1em" }}>
-            {currHost.name} has been on {episodes.length} episodes:
+            {currGuest.name} has been on {episodes.length} episodes:
           </Typography>
 
           {episodes.map((episode, index) => (
@@ -44,4 +44,4 @@ const HostPage = () => {
   );
 };
 
-export default HostPage;
+export default GuestPage;
