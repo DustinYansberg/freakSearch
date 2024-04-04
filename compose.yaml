@@ -1,5 +1,6 @@
 services:
   server:
+    image: dustinyansberg/freakapi-server
     build:
       context: .
       target: final
@@ -11,6 +12,7 @@ services:
       db:
         condition: service_healthy
   frontend:
+    image: dustinyansberg/freakapi-frontend
     build:
       context: ./frontend/ClientApp
       target: frontend
