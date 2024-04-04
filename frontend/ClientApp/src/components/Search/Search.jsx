@@ -26,7 +26,7 @@ const Search = () => {
   const searchButtonClicked = (e) => {
     e.preventDefault();
     const query = document.getElementById("searchInput").value;
-    const url = `https://localhost:7099/api/Episode/search/${encodeURIComponent(
+    const url = `http://localhost:80/api/Episode/search/${encodeURIComponent(
       query
     )}`;
     console.log(url);

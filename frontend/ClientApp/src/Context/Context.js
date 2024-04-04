@@ -7,7 +7,7 @@ export const ContextProvider = ({ children }) => {
   const [guestData, setGuestData] = useState([]);
 
   useEffect(() => {
-    const url = "https://localhost:7099/api/host/GetAll";
+    const url = "http://localhost:80/api/host/GetAll";
 
     !(hostData.length > 0)
       ? fetch(url)
@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
   }, [hostData, setHostData]);
 
   useEffect(() => {
-    const url = "https://localhost:7099/api/Guest/GetAll";
+    const url = "http://localhost:80/api/Guest/GetAll";
 
     !(guestData.length > 0)
       ? fetch(url)
