@@ -24,4 +24,4 @@ I used Docker-Compose to containerize the application to make deployment a breez
 
 ## Contributing
 
-At this time, I have no specific elements that I am looking for contributions on. As development continues, that may change. If you ahve any suggestions or questions, please do not hesitate to reach out to me: DustinYansberg@gmail.com
+At this time, I have no specific elements that I am looking for contributions on. As development continues, that may change. If you have any suggestions or questions, please do not hesitate to reach out to me: DustinYansberg@gmail.com
