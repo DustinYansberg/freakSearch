@@ -8,6 +8,22 @@ This is a Search Engine and Web API all-in-one for the entire archival records o
 
 I created this because I found that I had a difficult time finding topics that were discussed in Freakonomics.
 
+# Technologies Used
+
+### Webscraping
+<img src="https://img.shields.io/badge/python-gray?style=for-the-badge&logo=python&logoColor=white&labelColor=%233776AB&color=gray"/> <img src="https://img.shields.io/badge/beautiful_soup_4-gray?style=for-the-badge&logo=python&logoColor=white&labelColor=%233776AB&color=gray"/> <img src="https://img.shields.io/badge/pandas-gray?style=for-the-badge&logo=pandas&logoColor=white&labelColor=%23150458&color=gray"/>
+### Database
+<img src="https://img.shields.io/badge/mysql-gray?style=for-the-badge&logo=mysql&logoColor=white&labelColor=%234479A1&color=gray"/> 
+
+### Server
+<img src="https://img.shields.io/badge/C%23-gray?style=for-the-badge&logo=csharp&logoColor=white&labelColor=%23A8B9CC&color=gray"/> <img src="https://img.shields.io/badge/.NET-gray?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=%23512BD4&color=gray"/> <img src="https://img.shields.io/badge/Apache_LuceneNet-gray?style=for-the-badge&logo=apache&logoColor=white&labelColor=%23D22128&color=gray"/> 
+
+### Frontend
+<img src="https://img.shields.io/badge/javascript-gray?style=for-the-badge&logo=javascript"/> <img src="https://img.shields.io/badge/react-gray?style=for-the-badge&logo=react&logoColor=white&labelColor=%2361DAFB&color=gray"/> <img src="https://img.shields.io/badge/Material%20UI-gray?style=for-the-badge&logo=mui&logoColor=white&labelColor=%23007FFF&color=gray"/> 
+
+### Deployment
+<img src="https://img.shields.io/badge/docker-gray?style=for-the-badge&logo=docker&logoColor=white&labelColor=%232496ED&color=gray"/> <img src="https://img.shields.io/badge/aws-gray?style=for-the-badge&logo=amazonaws&logoColor=white&labelColor=%23232F3E&color=gray"/> <img src="https://img.shields.io/badge/ecs-gray?style=for-the-badge&logo=amazonecs&logoColor=white&labelColor=%23FF9900&color=gray"/> 
+
 # Why?
 
 I listen to Freakonomics every week, and often something I heard on the show enters my discussions with friends. In these discussions, I frequently found my self struggling to remember which episode I heard a quote or tidbit. This struggle has lead to me being inaccurate or providing inadequate sources. To solve this problem, I decide to build a web application that allows me to remember where I heard that interesting tidbit I want to share with friends.
