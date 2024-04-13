@@ -42,7 +42,7 @@ From the results page, you can click on any result to be taken directly to the F
 
 # Python, Pandas, Beautiful Soup4
 
-I used Python with Pandas and Beautiful Soup 4 to scrape all of the transcripts, guests, sources, and hosts for each Freakonomics Podcast episode and then import them into a SQL database.
+We used Python with Pandas and Beautiful Soup 4 to scrape all of the transcripts, guests, sources, and hosts for each Freakonomics Podcast episode and then import them into a SQL database.
 
 BeautifulSoup4 and Pandas are insanely cool and powerful, though its tough to demonstrate without showing the code. So here is a gif of me scrolling through an early implementation of the .ipynb file:
 
@@ -50,11 +50,11 @@ BeautifulSoup4 and Pandas are insanely cool and powerful, though its tough to de
 
 ## Other technical stuff
 
-The Server logic is written in C# with RESTful API calls for hosts, guests, and episodes. LuceneNet is a Machine Learning library made for C#. I implemented it to make search results relevant to a user's given search terms. It allows for fuzzy searches and finds words or phrases related to a provided search term. 
+The Server logic is written in C# with RESTful API calls for hosts, guests, and episodes. LuceneNet is a Machine Learning library made for C#. We implemented it to make search results relevant to a user's given search terms. It allows for fuzzy searches and finds words or phrases related to a provided search term. 
 
 The frontend is written in React JS with a Material UI component Library. I use Context to store hosts and guests on the front end to simplify the handling of state between different Hosts and Guest components.
 
-I used Docker-Compose to containerize the application to make deployment a breeze. For a time I had it deployed with AWS on an ECS cluster, but I have taken it down to save on costs. It still run locally on my machine, and I use it when I want to find something on the podcast.
+We used Docker-Compose to containerize the application to make deployment a breeze. For a time we had it deployed with AWS on an ECS cluster, but we have taken it down to save on costs. It still run locally on my machine, and I use it when I want to find something on the podcast.
 
 # Contributing
 
