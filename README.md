@@ -4,7 +4,9 @@ Freak Search
 
 ## Description
 
-Search Engine and Web API all in one for the entire archival records of Freakonomics. This tool allows a user to find any topic, person, or quote from any Freakonomics podcast episode.
+Search Engine and Web API all in one for the entire archival records of the Freakonomics Podcast. This tool allows a user to find any topic, person, or quote from any Freakonomics podcast episode.
+
+I created this because I found that I had a difficult time finding topics that were discussed in Freakonomics.
 
 ## Why?
 
@@ -12,22 +14,13 @@ I listen to Freakonomics every week, and often something I heard on the show ent
 
 ## Devlog
 
-So far I have scraped all of the existing episode transcripts from Freakonomics website.
-I have taken this scraped data and built a simple API that queries all entries in the DB.
-My next step is to further implement API calls for more precise information about episodes. 
-Then I want to begin building the search system with a typescript react frontend.
-I am at a point that I believe it will be more useful to the enduser and myself to ahve these projects to be split into two separate projects, so I intend to make freakApi a stand alone project from freakSearch
-For now, I will detail how to use the existing API in the Usage section.
+This tool uses Python and Beautiful Soup 4 to scrape all of the transcripts, guests, sources, and hosts for each Freakonomics Podcast episode. It then indexes these items and stores them in a database. 
 
-## Quick Start
+The Server logic is written in C# with RESTful API calls for hosts, guests, and episodes. LuceneNet is a Machine Learning library made for C#. I implemented it to make search results relevant to a user's given search terms. It allows for fuzzy searches and finds words or phrases related to a provided search term. 
 
-This is a work in progress (WIP) Keep an eye out for developments in the near future.
+The frontend is written in React JS with a Material UI component Library. I use Context to store hosts and guests on the front end to simplify the handling of state between different Hosts and Guest components.
 
-## Usage
-
-Presently, the github repo can be cloned and opening the freakSearch root directory in your command line and running `dotnet run` will launch the project.
-However, since the database is not yet deployed, a user will not be able to successfully run any API calls.
-Please stay tuned for further developments as I intend to deploy the fully functional API within a week.
+I used Docker-Compose to containerize the application to make deployment a breeze. For a time I had it deployed with AWS on an ECS cluster, but I have taken it down to save on costs. It still run locally on my machine, and I use it when I want to find something on the podcast.
 
 ## Contributing
 
