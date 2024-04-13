@@ -79,7 +79,7 @@ Things aren't working yet? Feel free to reach out to me directly about it. `Dust
 
 
 
-## Other technical stuff
+# Other technical stuff
 
 The Server logic is written in C# with RESTful API calls for hosts, guests, and episodes. LuceneNet is a Machine Learning library made for C#. We implemented it to make search results relevant to a user's given search terms. It allows for fuzzy searches and finds words or phrases related to a provided search term. 
 
