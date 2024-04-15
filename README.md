@@ -6,7 +6,11 @@
 
 This is a Search Engine and Web API all-in-one for the entire archival records of the Freakonomics Podcast. This tool allows a user to find any topic, person, or quote from any Freakonomics podcast episode.
 
-I created this because I found that I had a difficult time finding topics that were discussed in Freakonomics.
+# Developers
+Front End Lead Developer [Dustin Yansberg](https://github.com/DustinYansberg)
+
+Back End Lead Developer [Joshua Bliek](https://github.com/slayinmantis213) 
+
 
 # Technologies Used
 
